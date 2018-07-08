@@ -3,8 +3,12 @@ require 'pry'
 def alphabetize(arr)
   esperanto = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".chars
 
-  arr.sort_by do |string|
-    esperanto.index(string[0])
+  split = arr.sort_by do |string|
+    string.split("")
+  end
+
+  split.map do |word|
+    esperanto.index(word)
   end
 
 end
