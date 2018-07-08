@@ -1,8 +1,10 @@
 require 'pry'
 
 def alphabetize(arr)
+  ESPERANTO_ALPHABET = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+
   arr.sort_by do |string|
-    string[0]
+    ESPERANTO_ALPHABET.index(string[0])
   end
 
 end
